@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+canvas { cursor: crosshair; }
+
+.toolbar button { padding: 6px 10px; border-radius: 4px; border: 1px solid #aaa; background: #fff; cursor: pointer; }
+.toolbar button.active { background: #333; color: #fff; }
+.toolbar input[type="range"] { vertical-align: middle; }
+
+#users { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+#users .user { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; background: #fff; border-radius: 12px; border: 1px solid #ddd; }
+#users .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }

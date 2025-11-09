@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collaborative Canvas</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* minimal inline to ensure layout even if CSS fails */
+    .toolbar { display: flex; gap: 12px; align-items: center; justify-content: center; margin-bottom: 8px; flex-wrap: wrap; }
+    .canvas-wrap { position: relative; display: inline-block; }
+    #canvas { background: #fff; border: 2px solid #444; }
+    #cursorLayer { position: absolute; left: 0; top: 0; pointer-events: none; }
+    #users { margin-top: 8px; font-size: 14px; }
+  </style>
+  </head>
+<body>
+  <h2>Real-time Collaborative Drawing</h2>
+  <div class="toolbar">
+    <button id="tool-brush">Brush</button>
+    <button id="tool-eraser">Eraser</button>
+    <label>Color <input type="color" id="color" value="#000000" /></label>
+    <label>Width <input type="range" id="width" min="1" max="30" value="3" /></label>
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
+    <span id="me"></span>
+  </div>
+
+  <div class="canvas-wrap">
+    <canvas id="canvas" width="1000" height="600"></canvas>
+    <canvas id="cursorLayer" width="1000" height="600"></canvas>
+  </div>
+
+  <div id="users"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="canvas.js"></script>
+  <script src="websocket.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
