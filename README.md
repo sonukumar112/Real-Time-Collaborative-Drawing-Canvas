@@ -11,6 +11,10 @@ A vanilla JS + HTML5 Canvas multi-user drawing app with a Node.js + Socket.io ba
 - Global undo and redo (server-authoritative op-log)
 - Basic touch support (mobile)
 
+  # Demo Output
+  <img width="1493" height="917" alt="image" src="https://github.com/user-attachments/assets/f050adf5-1897-4918-89bd-71b9454b4623" />
+
+
 ## Quick start
 
 ```powershell
